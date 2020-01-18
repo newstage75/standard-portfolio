@@ -18,9 +18,19 @@ $spw:(100vw/375);
 }
 
 @font-face {
-  font-family: "Objective";
-  src: url(fonts/objective/Objective_OTF) format("otf"),
-       url(fonts/objective/Objective_Woff2) format("woff2");
+  font-family: "objective-Bold";
+  src: url(fonts/objective-Bold/objective-Bold.otf) format("otf"),
+       url(fonts/objective-Bold/objective-Bold.ttf) format("woff2");
+}
+@font-face {
+  font-family: "objective-Regular";
+  src: url(fonts/objective-Regular/objective-Regular.otf) format("otf"),
+       url(fonts/objective-Regular/objective-Regular.ttf) format("woff2");
+}
+@font-face {
+  font-family: "objective-BoldItalic";
+  src: url(fonts/Objective-BoldItalic/Objective-BoldItalic.otf) format("otf"),
+       url(fonts/Objective-BoldItalic/Objective-BoldItalic.ttf) format("woff2");
 }
 
 *, *::before, *::after{
@@ -39,7 +49,7 @@ $spw:(100vw/375);
       color: #fff;
       top: 36*$pcw;
       left: 36*$pcw;
-      // font-family: Objective;
+      font-family: objective-Regular;
       @include im{
         font-size: 18*$spw;
       }
@@ -54,6 +64,7 @@ $spw:(100vw/375);
       left:127*$pcw;
       font-size: 180*$pcw;
       color: #7AD6BB;
+      font-family: objective-Regular;
       @include im{
         font-size: 54*$spw;
       }
@@ -98,19 +109,22 @@ $spw:(100vw/375);
     }
     &-side{
       position: absolute;
-      left: -480*$pcw;
+      left: -560*$pcw;
       top:570*$pcw;
+      width: 100%;
       .portfolio{
         transform: translate(-100%, -100%);
         bottom:0;
         font-size: 300*$pcw;
         transform: rotate(90deg);
         color: #fff;
+        font-family: objective-Regular;
       }
     }
     .title{
       text-align: center;
       font-size: 60*$pcw;
+      font-family: objective-Regular;
       @include im{
         font-size: 36*$spw;
       }
@@ -217,14 +231,19 @@ $spw:(100vw/375);
    }
   .works{
     padding: 212*$pcw 0 96*$pcw;
+    margin: auto 61*$pcw;
+    border-left: 1*$pcw solid #454545;
     background-color: #fff;
     @include im{
       padding: 40*$spw 0 80*$spw;
+      margin: auto 0;
+      border-left: none;
     }
     .recent{
       text-align: center;
       font-size: 22*$pcw;
       color: #7AD6BB;
+      font-family: objective-Regular;
       @include im{
         font-size: 16*$spw;
       }
@@ -233,6 +252,7 @@ $spw:(100vw/375);
       text-align: center;
       font-size: 60*$pcw;
       margin-top: 33*$pcw;
+      font-family: objective-Regular;
       @include im{
         font-size: 36*$spw;
       }
@@ -244,6 +264,35 @@ $spw:(100vw/375);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          display: block;
+          top: 150*$pcw;
+          left: -90*$pcw;
+          width: 50*$pcw;
+          height: 50*$pcw;
+          border-radius: 50%;
+          background-color: #7AD6BB;
+          @include im{
+            display: none;
+          }
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          display: block;
+          top: 166*$pcw;
+          left: -74*$pcw;
+          width: 18*$pcw;
+          height: 18*$pcw;
+          border-radius: 50%;
+          background-color: #fff;
+          @include im{
+            display: none;
+          }
+        }
         &:nth-of-type(n+2){
           margin-top: 158*$pcw;
         }
@@ -469,6 +518,7 @@ $spw:(100vw/375);
     .title{
       text-align: center;
       font-size: 60*$pcw;
+      font-family: objective-Regular;
       @include im{
         font-size: 36*$spw;
       }
@@ -514,6 +564,7 @@ $spw:(100vw/375);
         text-align: center;
         color:#7AD6BB;
         font-size: 24*$pcw;
+        font-family: objective-Regular;
         @include im{
           font-size: 36*$spw;
         }
