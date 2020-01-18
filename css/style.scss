@@ -58,7 +58,7 @@ $spw:(100vw/375);
       width: 1280*$pcw;
       height: 578*$pcw;
     }
-    .title{
+    .main-title{
       position: absolute;
       top: 390*$pcw;
       left:127*$pcw;
@@ -123,8 +123,21 @@ $spw:(100vw/375);
     }
     .title{
       text-align: center;
-      font-size: 60*$pcw;
       font-family: objective-Regular;
+      &-p{
+        font-size: 60*$pcw;
+        position: relative;
+        display: inline-block;
+        &::after{
+          content: "Skills";
+          position: absolute;
+          top: -4*$pcw;
+          left: 5*$pcw;
+          color: #F2F2F2;
+          text-shadow:1px 1px 0 #7AD6BB,-1px 1px 0 #7AD6BB,1px -1px 0 #7AD6BB,-1px -1px 0 #7AD6BB;
+          z-index: -1;
+        }
+      }
       @include im{
         font-size: 36*$spw;
       }
@@ -159,6 +172,7 @@ $spw:(100vw/375);
         background-image: url(../img/coding.png);
         background-size: contain;
         background-repeat: no-repeat;
+        z-index: 1;
       }
       &-info{
         font-size: 20*$pcw;
@@ -250,9 +264,22 @@ $spw:(100vw/375);
     }
     .title{
       text-align: center;
-      font-size: 60*$pcw;
-      margin-top: 33*$pcw;
       font-family: objective-Regular;
+      margin-top: 29*$pcw;
+      &-p{
+        font-size: 60*$pcw;
+        position: relative;
+        display: inline-block;
+        &::after{
+          content: "Works";
+          position: absolute;
+          top: -4*$pcw;
+          left: 5*$pcw;
+          color: #fff;
+          text-shadow:1px 1px 0 #7AD6BB,-1px 1px 0 #7AD6BB,1px -1px 0 #7AD6BB,-1px -1px 0 #7AD6BB;
+          z-index: -1;
+        }
+      }
       @include im{
         font-size: 36*$spw;
       }
@@ -517,8 +544,21 @@ $spw:(100vw/375);
     background-color: #fff;
     .title{
       text-align: center;
-      font-size: 60*$pcw;
       font-family: objective-Regular;
+      &-p{
+        font-size: 60*$pcw;
+        position: relative;
+        display: inline-block;
+        &::after{
+          content: "History";
+          position: absolute;
+          top: -4*$pcw;
+          left: 5*$pcw;
+          color: #fff;
+          text-shadow:1px 1px 0 #7AD6BB,-1px 1px 0 #7AD6BB,1px -1px 0 #7AD6BB,-1px -1px 0 #7AD6BB;
+          z-index: -1;
+        }
+      }
       @include im{
         font-size: 36*$spw;
       }
