@@ -50,6 +50,7 @@ $spw:(100vw/375);
       top: 36*$pcw;
       left: 36*$pcw;
       font-family: objective-Regular;
+      font-weight: bold;
       @include im{
         font-size: 18*$spw;
       }
@@ -65,19 +66,19 @@ $spw:(100vw/375);
       font-size: 180*$pcw;
       color: #7AD6BB;
       font-family: objective-Regular;
+      font-weight: bold;
+      // font-style: italic;
       @include im{
         font-size: 54*$spw;
       }
     }
   }
   .greeting{
-    // height: 1219*$pcw;
-    padding: 261*$pcw 279*$pcw 277*$pcw;//書き方変えたい
+    padding: 261*$pcw 279*$pcw 277*$pcw;
     @include im{
       padding: 60*$spw 20*$spw;
     }
     &-content{
-      // height: 681*$pcw;
       .name{
         font-size: 32*$pcw;
         text-align: center;
@@ -99,7 +100,6 @@ $spw:(100vw/375);
     }
   }
   .skill{
-    // height: 2005*$pcw;
     background-color: #F2F2F2;
     position: relative;
     padding: 164*$pcw 0 372*$pcw;
@@ -119,15 +119,20 @@ $spw:(100vw/375);
         transform: rotate(90deg);
         color: #fff;
         font-family: objective-Regular;
+        font-weight: bold;
       }
     }
     .title{
       text-align: center;
       font-family: objective-Regular;
+      font-weight: bold;
       &-p{
         font-size: 60*$pcw;
         position: relative;
         display: inline-block;
+        @include im{
+          font-size: 35*$spw
+        }
         &::after{
           content: "Skills";
           position: absolute;
@@ -142,103 +147,154 @@ $spw:(100vw/375);
         font-size: 36*$spw;
       }
     }
-    .box1{
-      position: relative;
-      margin-top: 116*$pcw;
+    //一個目の緑の箱
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 340*$pcw;
       width:837*$pcw;
       height:452*$pcw;
       background-color: #7AD6BB;
       z-index: -1;
+      @include im{
+        display: none
+      }
+    }
+    //２個目の緑の箱
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 1181*$pcw;
+      right: 0;
+      width:837*$pcw;
+      height:452*$pcw;
+      background-color: #7AD6BB;
+      z-index: -1;
+      @include im{
+        display: none;
+      }
+    }
+    .box1{
+      margin: 212*$pcw 128*$pcw 0;
       .coding{
-        position: absolute;
-        top:91*$pcw;
-        left: 227*$pcw;
-        font-size: 32*$pcw;
+          margin-left: 153*$pcw;
+        @include im{
+          text-align: center;
+          margin-left: auto;
+        }
+        p{
+          display: inline-block;
+          font-size: 32*$pcw;
+          @include im{
+            font-size: 16*$spw;
+          }
+        }
         .number{
           font-size: 100*$pcw;
+          font-family: objective-Regular;
+          font-weight: bold;
+          margin: 0 25*$pcw 0 18*$pcw;
+          @include im{
+            font-size: 36*$spw;
+            margin: 0 5*$spw;
+          }
         }
         .ken{
           font-size: 20*$pcw;
+          @include im{
+            font-size: 16*$spw;
+          }
         }
       }
-      &:after{
-        content: '';
-        position: relative;
-        top:248*$pcw;
-        left: 127*$pcw;
-        width:500*$pcw;
-        height:350*$pcw;
-        display: block;
-        background-image: url(../img/coding.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 1;
-      }
       &-info{
-        font-size: 20*$pcw;
-        width: 440*$pcw;
-        position: absolute;
-        top: 247*$pcw;
-        left: 732*$pcw;
-        line-height: 2;
-        color: #454545;
-        @include im{
-          font-size: 10*$spw;
-          width: 160*$spw;
-          top:0;
-          left:200*$spw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        margin-top: 89*$pcw;
+        &-img{
+          width: 500*$pcw;
+          height: 100%;
+          z-index: 1;
+          @include im{
+            width: 80%;
+            margin: 0 auto
+          }
+        }
+        &-p{
+          font-size: 20*$pcw;
+          width: 440*$pcw;
+          line-height: 2;
+          color: #454545;
+          @include im{
+            font-size: 11*$spw;
+            width: 100%;
+            top:0;
+            left:200*$spw;
+            margin-top: 25*$spw;
+          }
         }
       }
     }
     .box2{
-      position: relative;
-      margin-top: 389*$pcw;
-      margin-left: auto;
-      width:837*$pcw;
-      height:452*$pcw;
-      right: 0;
-      background-color: #7AD6BB;
-      z-index: -1;
-      @include im{
-        margin-top: 180*$spw;
-      }
+      margin: 330*$pcw 128*$pcw 0;
       .design{
-        position: absolute;
-        top:91*$pcw;
-        left: 227*$pcw;
-        font-size: 32*$pcw;
+        text-align: right;
+        @include im{
+          text-align: center;
+        }
+        p{
+          display: inline-block;
+          font-size: 32*$pcw;
+          @include im{
+            font-size: 16*$spw;
+          }
+        }
         .number{
           font-size: 100*$pcw;
+          font-family: objective-Regular;
+          font-weight: bold;
+          margin: 0 41*$pcw 0 62*$pcw;
+          @include im{
+            font-size: 36*$spw;
+            margin: 0 5*$spw;
+          }
         }
         .ken{
           font-size: 20*$pcw;
+          @include im{
+            font-size: 16*$spw;
+          }
         }
       }
-      &:after{
-        content: '';
-        position: relative;
-        top:248*$pcw;
-        left: 209*$pcw;
-        width:500*$pcw;
-        height:350*$pcw;
-        display: block;
-        background-image: url(../img/design.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
       &-info{
-        font-size: 20*$pcw;
-        width: 440*$pcw;
-        position: absolute;
-        top: 247*$pcw;
-        left: -316*$pcw;
-        line-height: 2;
-        color: #454545;
-        @include im{
-          font-size: 10*$spw;
-          width: 160*$spw;
-          top:15*$spw;
-          left:-120*$spw;
+        margin-top: 89*$pcw;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        &-p{
+          font-size: 20*$pcw;
+          width: 440*$pcw;
+          line-height: 2;
+          color: #454545;
+          @include im{
+            font-size: 11*$spw;
+            width: 100%;
+            top:15*$spw;
+            left:-120*$spw;
+            margin-top: 25*$spw;
+            order: 2;
+          }
+        }
+        &-img{
+          width: 500*$pcw;
+          height: 100%;
+          @include im{
+            width: 80%;
+            margin: 0 auto;
+            order: 1;
+          }
         }
       }
     }
@@ -258,6 +314,7 @@ $spw:(100vw/375);
       font-size: 22*$pcw;
       color: #7AD6BB;
       font-family: objective-Regular;
+      font-weight: bold;
       @include im{
         font-size: 16*$spw;
       }
@@ -265,11 +322,15 @@ $spw:(100vw/375);
     .title{
       text-align: center;
       font-family: objective-Regular;
+      font-weight: bold;
       margin-top: 29*$pcw;
       &-p{
         font-size: 60*$pcw;
         position: relative;
         display: inline-block;
+        @include im{
+          font-size: 35*$spw
+        }
         &::after{
           content: "Works";
           position: absolute;
@@ -408,6 +469,8 @@ $spw:(100vw/375);
       .number{
         font-size: 100*$pcw;
         margin-left: 26*$pcw;
+        font-family: objective-Regular;
+        font-weight: bold;
       }
       .ken{
         font-size: 20*$pcw;
@@ -440,6 +503,8 @@ $spw:(100vw/375);
       .number{
         font-size: 100*$pcw;
         margin-left: 26*$pcw;
+        font-family: objective-Regular;
+        font-weight: bold;
       }
     }
     .hai{
@@ -549,6 +614,9 @@ $spw:(100vw/375);
         font-size: 60*$pcw;
         position: relative;
         display: inline-block;
+        @include im{
+          font-size: 35*$spw
+        }
         &::after{
           content: "History";
           position: absolute;
@@ -605,8 +673,9 @@ $spw:(100vw/375);
         color:#7AD6BB;
         font-size: 24*$pcw;
         font-family: objective-Regular;
+        font-weight: bold;
         @include im{
-          font-size: 36*$spw;
+          font-size: 35*$spw;
         }
       }
       .kodawari{
@@ -620,11 +689,41 @@ $spw:(100vw/375);
         }
       }
     }
-    .slide-bar{
-      width: 100%;
-      height: 435*$pcw;
-      background-color: gray;
-    }
+      #css-slider {
+        width: 100%;
+        height: 435*$pcw;
+        background-color: gray;
+      	overflow: hidden;
+        .slider-wrapper {
+          width: 2400*$pcw;
+          position: relative;
+          left: 0;
+          will-change: transform;
+          animation: slider 10s infinite;
+          .slide-item {
+            width: 800*$pcw;
+            height: 435*$pcw;
+            float: left;
+            position: relative;
+            display: block;
+          }
+          .first{
+            background-color: #700;
+          }
+          .second{
+            background-color: #070;
+          }
+          .third{
+            background-color: #007;
+          }
+        }
+        @keyframes slider {
+          0% { transform: translateX(240*$pcw); }
+          33% { transform: translateX(-560*$pcw); }
+          66% { transform: translateX(-1340*$pcw); }
+          100% { transform: translateX(240*$pcw); }
+        }
+      }
     &-info{
       width: 100%;
       height: 735*$pcw;
@@ -633,6 +732,8 @@ $spw:(100vw/375);
       background-image: url(../img/smapho2.png);
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
       @include im{
         height: 450*$spw;
       }
