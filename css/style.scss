@@ -179,7 +179,7 @@ $spw:(100vw/375);
     .box1{
       margin: 212*$pcw 128*$pcw 0;
       .coding{
-          margin-left: 153*$pcw;
+          margin-left: 100*$pcw;
         @include im{
           text-align: center;
           margin-left: auto;
@@ -212,7 +212,7 @@ $spw:(100vw/375);
         display: flex;
         justify-content: space-between;
         flex-wrap:wrap;
-        margin-top: 89*$pcw;
+        margin-top: 66*$pcw;
         &-img{
           width: 500*$pcw;
           height: 100%;
@@ -238,7 +238,7 @@ $spw:(100vw/375);
       }
     }
     .box2{
-      margin: 330*$pcw 128*$pcw 0;
+      margin: 320*$pcw 128*$pcw 0;
       .design{
         text-align: right;
         @include im{
@@ -269,7 +269,7 @@ $spw:(100vw/375);
         }
       }
       &-info{
-        margin-top: 89*$pcw;
+        margin-top: 76*$pcw;
         display: flex;
         flex-wrap:wrap;
         justify-content: space-between;
